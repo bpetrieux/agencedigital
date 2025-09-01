@@ -1,0 +1,130 @@
+import Image from 'next/image'
+import imageBenjamin from '@/images/team/benjamin-petrieux.jpg'
+import Head from 'next/head'
+import FAQ from '@/components/FAQ'
+import { ContactSection } from '@/components/ContactSection'
+
+export const article = {
+  category: 'ECO',
+  date: '2025-09-01',
+  title: 'Comment rendre le web plus durable (et pourquoi ça compte)',
+  description:
+    "Le web consomme de l'énergie. Mais un site bien conçu peut réduire son impact tout en restant rapide, accessible et performant. Découvrons comment.",
+  author: {
+   name: 'Benjamin Pétrieux',
+    role: 'Fondateur — Agence Digitale',
+    image: { src: imageBenjamin },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+<Head>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": article.title,
+        "description": article.description,
+        "datePublished": article.date,
+        "author": {
+          "@type": "Person",
+          "name": article.author.name
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Agence Digitale",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://agencedigitale.ca/logo.png"
+          }
+        }
+      }),
+    }}
+  />
+</Head>
+
+---
+
+Chaque clic, chaque vidéo, chaque image chargée en ligne a un coût énergétique.  
+Si Internet était un pays, il serait parmi les plus gros consommateurs d’électricité au monde.  
+La bonne nouvelle ? Il existe mille façons de réduire cette empreinte, sans sacrifier la performance.
+
+![](./punch-clock.jpg)
+
+
+## Pourquoi ça compte
+
+Un site plus sobre n’est pas seulement une affaire d’écologie.  
+C’est aussi :
+
+- **Une meilleure expérience pour vos visiteurs** : pages rapides = moins d’abandons.  
+- **Un meilleur référencement** : Google valorise les sites rapides et accessibles.  
+- **Une réduction des coûts serveurs** : moins de ressources, moins de bande passante.  
+- **Une image positive** : vos clients voient que vous vous engagez concrètement.  
+
+Bref, c’est à la fois bon pour la planète, vos utilisateurs et votre entreprise.
+
+---
+
+## Comment rendre un site plus durable
+
+### 1. Alléger les pages
+Moins d’images lourdes, du code optimisé, et des formats modernes (WebP, AVIF).  
+Résultat : un site qui charge vite, même sur mobile.
+
+### 2. Optimiser l’hébergement
+Choisir un hébergeur alimenté par des énergies renouvelables et un CDN qui rapproche vos contenus des utilisateurs.
+
+### 3. Prolonger la durée de vie
+Un site bien conçu reste pertinent plus longtemps. En évitant les refontes lourdes tous les deux ans, on économise énergie, temps et argent.
+
+### 4. Penser accessibilité
+Un site accessible profite à tout le monde : aux personnes en situation de handicap, aux moteurs de recherche, et à la planète (moins de clics perdus).
+
+---
+
+## Sites pour qui c’est essentiel
+
+- **E-commerce** : des milliers de pages vues par jour ⇒ chaque optimisation compte.  
+- **Sites média / blogs à fort trafic** : réduire la taille des pages = des gigas économisés.  
+- **Institutions publiques et grandes entreprises** : exemplarité écologique + accessibilité.  
+
+## Sites où l’impact est moindre
+
+- **Sites vitrines à faible trafic** : l’impact direct est limité… mais un site optimisé reste un gage de sérieux et une meilleure expérience utilisateur.  
+
+En résumé : peu importe la taille du site, viser la sobriété numérique est toujours gagnant.
+
+---
+
+## FAQ — Web durable
+
+<FAQ
+  faqs={[
+    {
+      question: "Est-ce qu'un site rapide est forcément plus durable ?",
+      answer: "Pas toujours, mais dans la majorité des cas oui. La rapidité est liée à un code plus léger et donc à une consommation moindre de ressources."
+    },
+    {
+      question: "Un hébergeur vert, ça change vraiment quelque chose ?",
+      answer: "Oui, car l’électricité utilisée par les serveurs est un des plus gros postes d’émission du numérique. Privilégier un hébergeur alimenté par des énergies renouvelables réduit cet impact."
+    },
+    {
+      question: "Est-ce que ça coûte plus cher de concevoir un site éco-responsable ?",
+      answer: "Pas nécessairement. Souvent, les optimisations techniques réduisent aussi les coûts d’hébergement et de maintenance."
+    }
+  ]}
+/>
+
+---
+
+<ContactSection
+  title="Prêt à rendre votre présence en ligne plus durable ?"
+  ctaLabel="Créer un site éco-responsable"
+/>

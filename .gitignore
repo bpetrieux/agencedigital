@@ -1,0 +1,46 @@
+# ============================
+# Node / Next.js
+# ============================
+node_modules/
+.next/
+out/
+dist/
+.cache/
+.next-static/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ============================
+# Env & secrets
+# ============================
+.env
+.env.local
+.env.*.local
+
+# ============================
+# Logs
+# ============================
+logs
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# ============================
+# OS / Editeurs
+# ============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ============================
+# PHP / Mailer
+# ============================
+# Si tu inclus PHPMailer manuellement dans ton serveur,
+# on ignore la version locale pour éviter de la pusher
+contact/phpmailer/
+phpmailer/

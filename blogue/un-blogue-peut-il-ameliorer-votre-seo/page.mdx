@@ -1,0 +1,133 @@
+import Image from 'next/image'
+import { ContactSection } from '@/components/ContactSection'
+import imageBenjamin from '@/images/team/benjamin-petrieux.jpg'
+import Head from 'next/head'
+
+<Head>
+  {/* Breadcrumb */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://agencedigitale.ca/"},
+          {"@type":"ListItem","position":2,"name":"Blogue","item":"https://agencedigitale.ca/blogue"},
+          {"@type":"ListItem","position":3,"name":"Un blogue peut-il vraiment améliorer votre SEO ?","item":"https://agencedigitale.ca/blogue/un-blogue-peut-il-ameliorer-votre-seo"}
+        ]
+      })
+    }}
+  />
+
+  {/* Article */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context":"https://schema.org",
+        "@type":"Article",
+        "mainEntityOfPage":{
+          "@type":"WebPage",
+          "@id":"https://agencedigitale.ca/blogue/un-blogue-peut-il-ameliorer-votre-seo"
+        },
+        "headline":"Un blogue peut-il vraiment améliorer votre SEO ?",
+        "description":"Le blogue est souvent présenté comme un outil essentiel du SEO. Mais est-ce toujours vrai, et dans quelles conditions apporte-t-il réellement des résultats ?",
+        "author":{"@type":"Person","name":"Benjamin Pétrieux"},
+        "publisher":{
+          "@type":"Organization",
+          "name":"Agence Digitale",
+          "logo":{"@type":"ImageObject","url":"https://agencedigitale.ca/digitale.png"}
+        },
+        "datePublished":"2025-09-01",
+        "dateModified":"2025-09-01",
+        "image":[
+          "https://agencedigitale.ca/og-images/blogue-un-blogue-seo.jpg"
+        ],
+        "articleSection":"SEO",
+        "inLanguage":"fr-CA"
+      })
+    }}
+  />
+</Head>
+export const article = {
+  date: '2025-09-01',
+  category: 'SEO',
+  title: 'Un blogue peut-il vraiment améliorer votre SEO ?',
+  description:
+    "Le blogue est souvent présenté comme un outil essentiel du SEO. Mais est-ce toujours vrai, et dans quelles conditions apporte-t-il réellement des résultats ?",
+  author: {
+    name: 'Benjamin Pétrieux',
+    role: 'Fondateur — Agence Digitale',
+    image: { src: imageBenjamin },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+Un blogue est-il encore utile aujourd’hui pour améliorer son{"\u00A0"}référencement{"\u00A0"}naturel{"\u00A0"}?  
+La réponse est **oui… mais pas n’importe comment**.
+
+Un blogue bien pensé peut devenir un puissant levier de visibilité dans Google et dans les moteurs conversationnels comme **ChatGPT** ou **Gemini**. Mais un blogue “alimenté pour publier” sans stratégie n’apporte souvent ni trafic qualifié ni clients.
+
+![](./typewriter.jpg)
+
+## Pourquoi un blogue peut booster votre SEO
+
+Le SEO repose sur trois grands piliers : **le contenu, la technique et la popularité**.  
+Un blogue agit directement sur le premier, et indirectement sur les deux autres.
+
+- **Plus de contenu indexable** : chaque article est une porte d’entrée supplémentaire vers votre site.  
+- **Ciblage des requêtes longues traînes** : un article peut répondre à une question précise que vos prospects tapent dans Google.  
+- **Autorité et expertise** : publier régulièrement des contenus de qualité envoie un signal fort à Google (et à vos visiteurs).  
+- **Opportunités de maillage interne** : chaque nouvel article permet de lier vos pages stratégiques (services, contact, etc.) pour mieux guider l’utilisateur.
+
+👉 Exemple concret : sur Digitale, un article sur [les données structurées](/blogue/donnees-structurees) fait le lien naturel vers notre service [Référencer](/referencer).
+
+![](./magnifying-glass.jpg)
+
+## Quand un blogue n’aide pas (ou peu)
+
+Un blogue n’est pas magique. Il peut même devenir un poids si :  
+
+- Les articles sont **trop génériques** (“5 conseils pour votre site web”) et n’apportent rien de nouveau.  
+- Le contenu est **hors sujet** par rapport à vos services : vous attirez du trafic, mais pas de prospects.  
+- La publication est **irrégulière** ou abandonnée (un blogue vide peut donner une impression d’inactivité).  
+- Aucun lien n’est fait vers vos pages clés (services, contact). Résultat : les visiteurs lisent… puis partent.
+
+---
+
+## Les conditions pour qu’un blogue soit efficace
+
+Pour que votre blogue soit un atout SEO :  
+
+1. **Une stratégie éditoriale claire**  
+   Chaque article doit répondre à une question que vos clients potentiels se posent.  
+
+2. **Un maillage interne optimisé**  
+   Ne laissez pas vos lecteurs “perdus”. Dirigez-les vers vos pages clés comme [Concevoir](/concevoir) ou [Convertir](/convertir).  
+
+3. **Des contenus durables**  
+   Privilégiez des articles evergreen (utiles longtemps), mis à jour régulièrement.  
+
+4. **Une base technique solide**  
+   Un blogue rapide, bien structuré et optimisé (Core Web Vitals) maximise les résultats SEO.  
+
+---
+
+## Le verdict
+
+Un blogue n’est pas obligatoire pour être visible dans Google, mais c’est souvent **le moyen le plus efficace d’occuper l’espace** avec vos propres contenus.  
+Bien pensé, il attire du trafic qualifié, nourrit votre crédibilité et soutient vos pages stratégiques.  
+
+Le plus important : ne pas écrire “pour écrire”, mais écrire pour **éclairer, convaincre et guider vers l’action**.
+
+---
+
+<ContactSection
+  title="Vous voulez que votre blogue travaille pour votre SEO ?"
+  ctaLabel="Parlons de votre stratégie de contenu"
+/>

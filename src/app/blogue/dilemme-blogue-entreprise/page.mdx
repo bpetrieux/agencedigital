@@ -1,0 +1,156 @@
+import Head from 'next/head'
+import imageBenjamin from '@/images/team/benjamin-petrieux.jpg'
+import { ContactSection } from '@/components/ContactSection'
+import FAQ from '@/components/FAQ'
+
+export const article = {
+  date: '2025-09-02',
+  title: 'Le dilemme du blogue d’entreprise : comment savoir quoi écrire ?',
+  description:
+    'Un blogue peut être un atout puissant pour votre SEO, mais encore faut-il savoir quoi écrire. Découvrez comment trouver des idées pertinentes qui intéressent vos clients et améliorent votre positionnement.',
+  author: {
+   name: 'Benjamin Pétrieux',
+    role: 'Fondateur — Agence Digitale',
+    image: { src: imageBenjamin },
+  },
+  category: 'SEO',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+  alternates: { canonical: 'https://agencedigitale.ca/blogue/dilemme-blogue-entreprise' },
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author.name],
+  },
+}
+
+<Head>
+  {/* Breadcrumb */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agencedigitale.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Blogue", "item": "https://agencedigitale.ca/blogue" },
+          { "@type": "ListItem", "position": 3, "name": article.title, "item": "https://agencedigitale.ca/blogue/dilemme-blogue-entreprise" }
+        ]
+      }),
+    }}
+  />
+
+  {/* Article */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://agencedigitale.ca/blogue/dilemme-blogue-entreprise"
+        },
+        "headline": article.title,
+        "description": article.description,
+        "author": { "@type": "Person", "name": article.author.name },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Agence Digitale",
+          "logo": { "@type": "ImageObject", "url": "https://agencedigitale.ca/icon.png" }
+        },
+        "datePublished": article.date,
+        "dateModified": article.date,
+        "image": ["https://agencedigitale.ca/og-images/blogue-dilemme-blogue.jpg"],
+        "articleSection": article.category,
+        "inLanguage": "fr-CA"
+      }),
+    }}
+  />
+</Head>
+
+On vous l’a sûrement déjà dit : pour booster votre visibilité en ligne, un blogue est indispensable. Et c’est vrai : publier du contenu de qualité peut attirer des visiteurs, améliorer votre SEO, et générer de nouveaux clients.  
+
+Mais une question revient toujours : **« De quoi devrions-nous parler sur notre blogue ? »**
+
+Publier pour publier n’apporte rien. Le secret ? Trouver des sujets qui intéressent vos clients **et** qui renforcent votre référencement.
+
+---
+
+## 1. Écoutez vos clients : la meilleure source d’idées
+
+Vos clients posent chaque jour les questions qui devraient devenir vos prochains articles.  
+
+- Parlez avec votre équipe de service à la clientèle : quelles questions reviennent toujours ?  
+- Demandez à vos vendeurs : quels freins ou objections rencontrent-ils le plus souvent ?  
+
+👉 Exemple : si vous offrez un logiciel de comptabilité, un article comme *« Comment faire ma déclaration de revenus d’entreprise étape par étape ? »* est à la fois utile et optimisé SEO.
+
+---
+
+## 2. Inspirez-vous de Google (légalement)
+
+Une fois vos idées listées, validez-les avec les outils de Google :
+
+- **Suggestions de recherche** : tapez un mot-clé, regardez ce que Google propose.  
+- **People Also Ask** (*Autres questions posées*) : une mine de questions concrètes.  
+- **Google Trends** : suivez les tendances pour publier au bon moment.  
+
+Ces outils vous permettent de savoir ce que les internautes cherchent vraiment, pas seulement ce que vous imaginez.
+
+---
+
+## 3. Privilégiez les contenus durables (evergreen)
+
+Les articles qui durent dans le temps apportent le plus de valeur.  
+
+Un guide comme *« Comment choisir un bon plan de retraite »* restera pertinent pendant des années.  
+À l’inverse, *« Les nouveautés fiscales 2024 »* sera vite dépassé.  
+
+Misez sur du contenu evergreen pour rentabiliser chaque heure passée à écrire.
+
+---
+
+## Verdict : écrire ce que vos clients veulent lire
+
+Créer un blogue ne doit pas être une corvée. Voyez-le comme une opportunité d’aider vos clients tout en améliorant votre référencement.  
+
+✅ Concentrez-vous sur leurs questions.  
+✅ Validez vos sujets avec les bons outils.  
+✅ Rédigez des contenus utiles, clairs et durables.  
+
+C’est la recette pour transformer votre blogue en **aimant à clients**.
+
+---
+
+## FAQ — Blogue et SEO
+
+<FAQ
+  faqs={[
+    {
+      question: 'Un blogue est-il vraiment indispensable pour le SEO ?',
+      answer: 'Ce n’est pas obligatoire, mais un blogue régulier avec du contenu utile multiplie vos chances d’être trouvé sur Google et d’attirer un trafic qualifié.',
+    },
+    {
+      question: 'Dois-je publier souvent ?',
+      answer: 'La régularité est plus importante que la quantité. Mieux vaut un article pertinent par mois que du contenu superficiel chaque semaine.',
+    },
+    {
+      question: 'Faut-il absolument viser des mots-clés ?',
+      answer: 'Oui, mais de manière naturelle. Les meilleurs articles répondent à une intention réelle plutôt qu’à une liste de mots-clés forcés.',
+    },
+  ]}
+/>
+
+---
+
+<ContactSection
+  title="Envie de transformer votre blogue en levier SEO ?"
+  ctaLabel="Optimiser ma visibilité"
+/>

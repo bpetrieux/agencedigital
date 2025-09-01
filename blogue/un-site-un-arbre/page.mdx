@@ -1,0 +1,111 @@
+import imageBenjamin from '@/images/team/benjamin-petrieux.jpg'
+import Head from 'next/head'
+import FAQ from '@/components/FAQ'
+import { ContactSection } from '@/components/ContactSection'
+
+export const article = {
+  date: '2025-09-01',
+  category: 'ECO',
+  title: 'Un arbre pour chaque site: bâtir une forêt nourricière',
+  description:
+    'Chez Digitale, chaque site livré prend aussi racine dans la nature. Pour chaque projet, nous plantons un arbre localement, avec l’objectif de créer une petite forêt nourricière.',
+  author: {
+    name: 'Benjamin Pétrieux',
+    role: 'Fondateur — Agence Digitale',
+    image: { src: imageBenjamin },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+<Head>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pourquoi planter un arbre pour chaque site ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chaque projet devient une double contribution : un site performant pour votre entreprise et un arbre vivant qui participe à la création d’un écosystème durable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu’est-ce qu’une forêt nourricière ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Une forêt nourricière imite la nature : elle combine arbres fruitiers, arbustes et plantes vivaces qui se soutiennent entre eux, créant un écosystème résilient et productif."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Où les arbres sont-ils plantés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les arbres sont plantés localement sur un terrain qui m’appartient, ce qui permet d’en assurer l’entretien et de suivre leur croissance."
+            }
+          }
+        ]
+      }),
+    }}
+  />
+</Head>
+
+
+### Une initiative simple, un impact concret  
+Chez Digitale, chaque site livré ne se résume pas à un projet numérique : il devient aussi une contribution à la nature. Pour chaque nouveau site, nous plantons un arbre sur un terrain local, avec un objectif simple et concret : créer au fil des années une petite forêt nourricière.  
+
+### Pourquoi une forêt nourricière ?  
+Une forêt nourricière s’inspire des écosystèmes naturels. Contrairement à une plantation en monoculture, elle combine différentes espèces: arbres fruitiers, arbustes, plantes vivaces qui se soutiennent mutuellement.  
+Résultat : un espace vivant, productif et résilient, qui nourrit autant la biodiversité que les humains.  
+
+### Planter localement, c’est agir durablement  
+En choisissant de planter les arbres ici, sur un terrain qui m’appartient, je peux en prendre soin au quotidien et garantir leur croissance. C’est une manière de m’impliquer directement, sans intermédiaire, et de voir concrètement la forêt grandir, saison après saison.  
+
+### Et pour vous, clients ?  
+Chaque projet que nous réalisons chez Digitale devient une double contribution :  
+
+- **Un site performant** pour votre entreprise.  
+- **Un arbre vivant**, qui participe à la création d’un écosystème durable.  
+
+Vos projets ne font pas qu’avancer en ligne : ils prennent aussi racine dans le sol.  
+
+### Conclusion  
+À long terme, l’objectif est de transformer ce terrain en un espace vivant et nourricier. Une forêt où la technologie et la nature s’entrelacent symboliquement : des sites web qui poussent, et des arbres qui grandissent.  
+
+---
+<FAQ
+title="FAQ: Arbres et forêt nourricière"
+  faqs={[
+    {
+      question: 'Pourquoi planter un arbre pour chaque site ?',
+      answer:
+        'Chaque projet devient une double contribution : un site performant pour votre entreprise et un arbre vivant qui participe à la création d’un écosystème durable.',
+    },
+    {
+      question: 'Qu’est-ce qu’une forêt nourricière ?',
+      answer:
+        'Une forêt nourricière imite la nature : elle combine arbres fruitiers, arbustes et plantes vivaces qui se soutiennent entre eux, créant un écosystème résilient et productif.',
+    },
+    {
+      question: 'Où les arbres sont-ils plantés ?',
+      answer:
+        'Les arbres sont plantés localement sur un terrain qui m’appartient, ce qui permet d’en assurer l’entretien et de suivre leur croissance.',
+    },
+  ]}
+/>
+
+---
+
+<ContactSection
+  title="Envie d’un site qui fait pousser des arbres ?"
+  ctaLabel="Démarrer un projet durable"
+/>

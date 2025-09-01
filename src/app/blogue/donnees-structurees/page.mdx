@@ -1,0 +1,152 @@
+import imageBenjamin from '@/images/team/benjamin-petrieux.jpg'
+import { Button } from '@/components/Button'
+import { ContactSection } from '@/components/ContactSection'
+import FAQ from '@/components/FAQ'
+
+export const article = {
+  date: '2025-09-01',
+  title: 'Données structurées : le guide simple pour booster votre visibilité',
+  category: 'SEO',
+  description:
+    'À quoi servent les données structurées, où les utiliser, leurs avantages, limites, et comment les mettre en place sans jargon.',
+  author: {
+   name: 'Benjamin Pétrieux',
+    role: 'Fondateur — Agence Digitale',
+    image: { src: imageBenjamin },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+# Données structurées : le guide simple pour booster votre visibilité
+
+Les données structurées… ça sonne technique, mais leur rôle est simple : aider Google (et les autres moteurs) à mieux comprendre vos pages pour les présenter de manière plus riche.  
+C’est ce qui permet d’afficher des étoiles sous vos avis, un prix directement dans les résultats, ou même une FAQ prête à cliquer. Bref, elles transforment un lien bleu banal en une vitrine beaucoup plus attirante.  
+
+---
+
+## C’est quoi les données structurées ?
+
+Imaginez que vous expliquiez à Google ce que contient votre site avec des **étiquettes claires**.  
+Un produit n’est plus juste « du texte », mais **un produit avec un prix, une disponibilité et un avis client**.  
+Un article n’est plus juste un bloc de contenu, mais **un article signé, daté, avec un auteur identifié**.  
+
+Le format recommandé est le **JSON-LD**, basé sur le vocabulaire **Schema.org**. C’est une manière normalisée de donner du contexte aux moteurs de recherche sans modifier le contenu visible de la page.  
+
+![](./laptop.jpg)
+
+## Pourquoi c’est utile ?
+
+Parce qu’un résultat enrichi attire plus de regards et de clics. Les bénéfices sont concrets :  
+
+- **Visibilité accrue** : étoiles, prix, FAQ, événements affichés directement dans Google.  
+- **Meilleur taux de clics** : face à dix résultats similaires, celui qui se démarque gagne.  
+- **Confiance renforcée** : coordonnées et avis apparaissent clairement.  
+- **SEO local** : une fiche entreprise complète et balisée a plus de chances de ressortir dans Maps.  
+- **Assistants vocaux & IA** : vos contenus sont plus facilement repris par Google Assistant, ChatGPT, Gemini, Alexa…  
+- **Indexation facilitée** : Google comprend plus vite vos pages et peut les classer plus précisément.  
+
+---
+
+## Les limites à garder en tête
+
+Les données structurées ne sont pas une baguette magique :  
+
+- **Pas de garantie d’affichage** : Google choisit quand montrer un extrait enrichi.  
+- **Obligation de mise à jour** : prix, horaires, événements doivent rester exacts.  
+- **Pas de triche** : des données fausses ou exagérées peuvent mener à des sanctions.  
+- **Moins de clics parfois** : si Google affiche toute la réponse dans le résultat, certains utilisateurs n’iront pas plus loin.  
+
+---
+
+## Où les ajouter en priorité ?
+
+Certaines pages méritent vraiment un balisage précis :  
+
+- **Page d’accueil** : `Organization` ou `LocalBusiness`.  
+- **Produits / services** : `Product`, `Offer`, `Review`.  
+- **Articles de blog** : `Article` ou `BlogPosting`.  
+- **Page contact** : infos locales (`LocalBusiness`) avec adresse, téléphone et horaires.  
+- **Événements** : `Event`.  
+
+---
+
+## Faut-il vraiment en mettre partout ?
+
+Pas tous les sites ont besoin de données structurées, mais pour certains, c’est presque indispensable.  
+
+👉 **Les cas où c’est essentiel** :  
+- **Commerces en ligne** : produits, prix, disponibilité, avis… un must pour rassurer et vendre.  
+- **Entreprises locales** (restaurants, coiffeurs, agences, services) : meilleure visibilité sur Maps et recherches locales.  
+- **Médias et blogueurs** : pour que vos articles soient correctement affichés et repris.  
+- **Événements** : concerts, conférences, ateliers… vos infos pratiques directement visibles.  
+
+👉 **Les cas où ce n’est pas prioritaire** :  
+- **Sites simples ou temporaires** (par ex. une landing page d’événement de courte durée).  
+- **Portfolios personnels** qui n’ont pas besoin d’extraits enrichis.  
+- **Pages internes sans enjeu SEO** (mentions légales, conditions, etc.).  
+
+En clair : si vos visiteurs cherchent **quoi acheter, où aller, quoi lire ou à quel événement participer**, les données structurées sont un levier puissant. Dans les autres cas, c’est un bonus, mais pas une priorité.  
+
+---
+
+## Conclusion
+
+Les données structurées ne remplacent pas un bon contenu ni une stratégie SEO solide. Mais elles sont comme une **vitrine bien éclairée** : elles mettent en valeur ce que vous avez déjà construit et augmentent vos chances d’attirer l’attention.  
+
+Si vous souhaitez que votre site **ressorte mieux dans Google, Maps, ou même dans les réponses d’outils comme ChatGPT et Gemini**, intégrer les bonnes données structurées est une étape incontournable.  
+
+👉 En résumé : pas besoin de tout baliser, mais choisissez intelligemment les pages clés et tenez vos informations à jour. C’est ce qui fera la différence entre un site invisible et un site qui attire, rassure et convertit.  
+
+---
+
+
+export const faqs = [
+  {
+    question: 'Qu’est-ce que les données structurées ?',
+    answer:
+      "Des infos ajoutées au code d’un site pour aider Google à comprendre le contenu et afficher des résultats enrichis."
+  },
+  {
+    question: 'Est-ce que ça améliore le classement SEO ?',
+    answer:
+      "Pas directement. Mais les extraits enrichis augmentent souvent le taux de clics."
+  },
+  {
+    question: 'Dois-je en mettre sur toutes les pages ?',
+    answer:
+      "Non. Ciblez accueil, produits/services, articles, contact et événements."
+  },
+  {
+    question: 'Quels sont les risques ou limites ?',
+    answer:
+      "Données fausses ou périmées = retrait des extraits enrichis ou sanction. Maintenez vos infos exactes."
+  },
+  {
+    question: 'Comment tester mes données structurées ?',
+    answer:
+      "Utilisez le Rich Results Test de Google et la Search Console."
+  },
+  {
+    question: 'Les plugins WordPress suffisent-ils ?',
+    answer:
+      "Oui pour une base, mais un JSON-LD personnalisé reste préférable pour un contrôle complet."
+  },
+]
+
+<FAQ faqs={faqs} />
+
+---
+
+## 🚀 Passez à l’action
+
+Faites en sorte que votre site **ressorte vraiment** dans les résultats.  
+Un petit ajustement technique peut faire une grande différence en visibilité et en conversions.  
+
+<ContactSection 
+  title="Faites ressortir votre site" 
+  ctaLabel="Améliorer ma visibilité" 
+/>

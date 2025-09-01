@@ -1,0 +1,121 @@
+import imageBenjamin from '@/images/team/benjamin-petrieux.jpg'
+import { ContactSection } from '@/components/ContactSection'
+import FAQ from '@/components/FAQ'
+
+export const article = {
+  date: '2025-09-01',
+  title: 'Google reCAPTCHA expliqué simplement : protéger vos formulaires sans frustrer vos utilisateurs',
+  description:
+    "Tout comprendre sur Google reCAPTCHA, ses versions (v2, v3, Entreprise), son utilité, ses limites et comment bien l’intégrer à vos formulaires.",
+  author: {
+    name: 'Benjamin Pétrieux',
+    role: 'Fondateur — Agence Digitale',
+    image: { src: imageBenjamin },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+## Qu’est-ce que reCAPTCHA ?
+
+Vous avez sûrement déjà coché la fameuse case *« Je ne suis pas un robot »* ou eu à cliquer sur dix images de feux de circulation.  
+C’est **Google reCAPTCHA** : un service conçu pour protéger vos formulaires des envois automatisés (spam, bots, attaques par force brute).  
+
+En clair, reCAPTCHA sert de **pare-feu intelligent** entre vos utilisateurs légitimes et les robots malveillants.
+
+---
+
+## Les différentes versions
+
+Google a fait évoluer son système au fil du temps :
+
+- **reCAPTCHA v2** : la fameuse case à cocher, parfois suivie d’un test visuel.  
+- **reCAPTCHA v3** : aucune interaction visible, Google attribue un score de confiance en arrière-plan.  
+- **reCAPTCHA Enterprise** : version avancée avec analyses poussées et intégration dans l’écosystème Google Cloud.
+
+---
+
+## Pourquoi c’est important ?
+
+Un formulaire de contact ou d’inscription non protégé peut rapidement devenir une **porte d’entrée pour des centaines de spams par jour**.  
+Résultat : perte de temps, surcharge serveur, fausses statistiques et parfois même vulnérabilités exploitées par des scripts malveillants.
+
+---
+
+## Avantages et limites
+
+✅ **Avantages**  
+- Réduit efficacement le spam automatisé.  
+- Protège vos serveurs et bases de données.  
+- Version v3 invisible (pas de clic pour l’utilisateur).  
+
+⚠️ **Limites**  
+- Peut créer de la friction utilisateur (v2, les fameux tests visuels).  
+- Pas infaillible : certains bots avancés passent au travers.  
+- Dépendance à Google (API, cookies et parfois RGPD/consentement).
+
+---
+
+## Bonne intégration = meilleure expérience
+
+- Sur un site vitrine ou un formulaire de contact simple : v2 suffit souvent.  
+- Sur un e-commerce avec beaucoup d’interactions : v3 (ou Enterprise) offre plus de fluidité.  
+- Attention à l’équilibre : **trop de sécurité peut décourager un vrai client**.
+
+---
+
+## Quels sites devraient absolument en avoir ?
+
+- **Formulaires de contact** : pour éviter les faux leads.  
+- **Inscriptions / comptes utilisateurs** : pour limiter les créations automatiques.  
+- **Paiements / e-commerce** : pour sécuriser une étape critique.  
+
+Moins essentiel sur :  
+- Un simple blog sans formulaire.  
+- Des pages statiques sans interaction utilisateur.  
+
+---
+
+## Conclusion
+
+Un reCAPTCHA bien choisi protège vos formulaires **sans casser l’expérience utilisateur**.  
+Il ne doit pas être vu comme une barrière, mais comme une assurance discrète que les vrais visiteurs passent toujours en priorité.
+
+---
+<FAQ
+  faqs={[
+    {
+      question: "Qu’est-ce que Google reCAPTCHA ?",
+      answer:
+        "Un service qui bloque le spam et les robots en filtrant les soumissions de formulaires.",
+    },
+    {
+      question: "Quelle est la différence entre v2 et v3 ?",
+      answer:
+        "La v2 demande une action visible (case à cocher ou images), la v3 attribue un score de confiance en arrière-plan sans interaction directe.",
+    },
+    {
+      question: "Est-ce obligatoire d’utiliser reCAPTCHA ?",
+      answer:
+        "Non, mais c’est fortement recommandé dès qu’un formulaire est en ligne pour éviter le spam.",
+    },
+    {
+      question: "Est-ce que reCAPTCHA peut bloquer de vrais utilisateurs ?",
+      answer:
+        "Oui, cela peut arriver avec la v2 et ses tests visuels, mais la v3 réduit ce risque.",
+    },
+    {
+      question: "Existe-t-il des alternatives à reCAPTCHA ?",
+      answer:
+        "Oui, comme hCaptcha ou Friendly Captcha, souvent privilégiés pour des raisons de confidentialité.",
+    },
+  ]}
+/>
+
+<ContactSection
+  title="Besoin d’aide pour sécuriser vos formulaires ?"
+  ctaLabel="Améliorer mon site"
+/>

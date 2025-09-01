@@ -1,0 +1,63 @@
+import logo from '@/images/clients/cordonnier-mal-chausse/logo.svg'
+import imageHero from './hero.jpg'
+import imageDebraFiscal from './debra-fiscal.jpg'
+
+export const caseStudy = {
+  client: 'Le cordonnier mal chaussé',
+  title: 'Pas besoin de faire les cent pas pour livrer des résultats qui tiennent la route.',
+  description:
+    'Notre propre site a encore l’odeur du cuir neuf, mais les résultats livrés à nos clients sont déjà bien rodés.',
+  summary: [
+    'Un portfolio encore en travaux — la priorité reste vos projets.',
+    'Une base technique cousue main : performance, SEO, accessibilité.',
+    'Une approche locale bien lacée pour attirer du trafic qualifié.',
+  ],
+  logo,
+  
+  date: '2024-01',
+  service: 'Web development, SEO, Marketing',
+  testimonial: {
+    author: { name: 'Marc Assin', role: 'Client ' },
+    content:
+      'Avec Digitale, j’ai trouvé chaussure à mon pied. L’expérience a été aussi confortable que d’enfiler mes vieilles pantoufles. Résultat : un site bien poli, prêt à briller sur le web. ',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Description
+
+Notre portfolio n’a pas encore trouvé sa pointure idéale.  
+Il sent encore la chaussure neuve, mais rassurez-vous : nos méthodes, elles, sont déjà bien rodées.  
+
+Plutôt que de polir notre vitrine, nous préférons vous livrer des sites taillés sur mesure : solides, confortables, et prêts à marcher droit vers vos objectifs.  
+
+Bref, le cordonnier mal chaussé avance peut-être en vieux running shoe, mais ses clients courent déjà en première classe.  
+
+## Ce que nous avons fait
+
+<TagList>
+  <TagListItem>Core Web Vitals (chaussure légère)</TagListItem>
+  <TagListItem>Accessibilité (semelle universelle)</TagListItem>
+  <TagListItem>SEO local (empreinte visible)</TagListItem>
+  <TagListItem>GA4 & conversions (mesure de foulée)</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Marc Assin', role: 'Humain' }}
+  
+>
+  Digitale a livré un site rapide et mesurable. En quelques mois, nous avons vu
+  plus de demandes de soumission et une visibilité locale en nette hausse. Bref,
+  leurs clients avancent vite, même si eux testent encore leurs propres lacets.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="+42%" label="Empreintes nettes" />
+  <StatListItem value="0.3s" label="Pour lacer mes souliers" />
+  <StatListItem value="100%" label="Clients chaussés correctement" />
+  <StatListItem value="1" label="Portfolio qui grince encore" />
+</StatList>
