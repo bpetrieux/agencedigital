@@ -32,7 +32,7 @@ export default async function BlogArticleWrapper({ article, children }) {
               {formatDate(article.date)}
             </time>
             <p className="mt-6 text-sm font-semibold text-neutral-950">
-              by {article.author.name}, {article.author.role}
+              Par {article.author.name}, {article.author.role}
             </p>
           </header>
         </FadeIn>
@@ -43,7 +43,7 @@ export default async function BlogArticleWrapper({ article, children }) {
                      <Breadcrumb
   items={[
     { name: 'Accueil', href: '/' },
-    { name: 'Blog', href: '/blogue' },
+    { name: 'Blogue', href: '/blogue' },
   /*  { name: article.title }, // dernier sans href = page courante*/
   ]}
 />
