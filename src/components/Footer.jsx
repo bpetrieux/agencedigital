@@ -150,6 +150,7 @@ function NewsletterForm() {
       </button>
     </div>
   </div>
+
 </form>
   )
 }
