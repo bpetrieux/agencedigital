@@ -1,8 +1,12 @@
+'use client'
+
+import { useEffect, useState, useId } from 'react'
 import { FadeIn } from '@/components/FadeIn'
 import { Button } from '@/components/Button'
 
 function Field({ as: Tag = 'input', label, ...props }) {
-  const id = props.id || props.name
+  const reactId = useId()
+  const id = props.id || props.name || reactId
   return (
     <div className="group relative z-0 transition-all focus-within:z-10">
       <Tag
@@ -21,6 +25,34 @@ function Field({ as: Tag = 'input', label, ...props }) {
   )
 }
 
+function TurnstileWidget({ siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY }) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Le script global Turnstile est chargé dans ton layout (<Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />)
+  if (!mounted || !siteKey) return null
+
+  return (
+    <>
+      <div
+        className="cf-turnstile mt-6"
+        data-sitekey={siteKey}
+        data-theme="auto"
+        data-language="fr"
+        // mode "managed" par défaut (pas besoin de data-callback ici)
+      />
+      <noscript>
+        <div className="mt-4 rounded-md bg-yellow-50 p-3 text-sm text-yellow-900">
+          Activez JavaScript pour vérifier que vous n’êtes pas un robot.
+        </div>
+      </noscript>
+    </>
+  )
+}
+
 export function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
@@ -35,6 +67,9 @@ export function ContactForm() {
         <Field label="Entreprise" name="company" />
         <Field label="Téléphone" type="tel" name="phone" />
         <Field as="textarea" label="Message" name="message" rows={6} required />
+
+        {/* Turnstile */}
+        <TurnstileWidget />
 
         <Button type="submit" className="mt-10">Envoyer</Button>
       </form>

@@ -1,4 +1,17 @@
 <?php
+$token = $_POST['cf-turnstile-response'] ?? '';
+$secret = '0x4AAAAAAByF13PsL9PQjeCii9YpKDzkj-Y';
+$verify = file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, stream_context_create([
+  'http' => [
+    'method' => 'POST',
+    'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+    'content' => http_build_query(['secret' => $secret, 'response' => $token, 'remoteip' => $_SERVER['REMOTE_ADDR'] ?? null]),
+    'timeout' => 5,
+  ],
+]));
+$ok = json_decode($verify, true)['success'] ?? false;
+if (!$ok) { header('Location: /contact?sent=0'); exit; }
+
 // contact-send.php
 // --- Réglages prudents ---
 ini_set('display_errors', 0);
@@ -61,3 +74,4 @@ try {
   // Log serveur si besoin : error_log($e->getMessage());
   header('Location: /contact?sent=0'); exit;
 }
+

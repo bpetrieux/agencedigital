@@ -150,7 +150,15 @@ function NewsletterForm() {
       </button>
     </div>
   </div>
-
+<div className="mt-4 text-[10px] text-neutral-400">
+    <a
+      href="https://www.cyberimpact.com"
+      className="text-neutral-400 hover:text-neutral-600"
+    >
+      Email marketing
+    </a>{' '}
+    par Cyberimpact
+  </div>
 </form>
   )
 }
@@ -163,7 +171,6 @@ export function Footer() {
           <Navigation />
           <div className="flex lg:justify-end">
             <NewsletterForm />
-
           </div>
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
@@ -172,7 +179,7 @@ export function Footer() {
             <span className="ml-2 font-display text-2xl font-semibold text-neutral-950 cursor-pointer">DIGITALE</span>
           </Link>
           <p className="text-sm text-neutral-700">
-             <a href="/politique-confidentialite" className="text-neutral-400 hover:text-neutral-600"
+             <a href="/politique-confidentialite"  aria-label="politique de confidentialité" className="text-neutral-400 hover:text-neutral-600"
     >Politique de confidentialité </a> © Digitale: agence web. {new Date().getFullYear()}
           </p>
         </div>
