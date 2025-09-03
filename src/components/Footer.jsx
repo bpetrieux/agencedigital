@@ -121,7 +121,7 @@ function NewsletterForm() {
       value="e799a59b-fcc9-4398-3d57-12ec739d70aa"
     />
     <input type="hidden" id="ci_language" name="ci_language" value="fr_ca" />
-    <input
+{/*    <input
       type="hidden"
       id="ci_sent_url"
       name="ci_sent_url"
@@ -138,7 +138,7 @@ function NewsletterForm() {
       id="ci_confirm_url"
       name="ci_confirm_url"
       value="/newsletter-confirm"
-    />
+    />*/}
 
     <div className="absolute inset-y-1 right-1 flex justify-end">
       <button
