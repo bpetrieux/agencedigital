@@ -1,7 +1,7 @@
 import '@/styles/tailwind.css'
 import Analytics from '@/components/Analytics'
 import CookieBanner from '@/components/CookieBanner'
-
+import Script from 'next/script'
 export const metadata = {
   title: {
     template: 'Agence Web Digitale',
